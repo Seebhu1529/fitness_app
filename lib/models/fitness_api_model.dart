@@ -4,7 +4,7 @@
 
 import 'dart:convert';
 
-FitnessApi fitnessApiFromJson(String str) => FitnessApi.fromJson(json.decode(str));
+List<FitnessApi> fitnessApiFromJson(String str) => List<FitnessApi>.from(json.decode(str).map((x) => FitnessApi.fromJson(x)));
 
 String fitnessApiToJson(FitnessApi data) => json.encode(data.toJson());
 
